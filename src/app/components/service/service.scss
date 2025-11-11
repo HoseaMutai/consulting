@@ -1,0 +1,178 @@
+/* ---------- Hero Section ---------- */
+.services-hero {
+  position: relative;
+  height: 100vh;
+  background: url('/images/aboutbg.png') no-repeat center center / cover;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.content {
+  position: relative;
+  z-index: 10;
+  max-width: 800px;
+  padding: 0 60px 80px;
+
+  h1 {
+    font-size: 3rem;
+    line-height: 1.3;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+    span {
+      color: #fff;
+      font-weight: 800;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 30px;
+  }
+
+}
+/* service one */
+/* ===== Service Hero Section ===== */
+.service-hero1 {
+  position: relative;
+  background-image: url('/images/aboutbg.png');
+  background-size: cover;
+  background-position: center;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.service-hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.service-quote-icon {
+  color: #d1a67b;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.service-hero-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+.service-hero-text {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  color: #e0e0e0;
+}
+
+@media (max-width: 768px) {
+  .service-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .service-hero-text {
+    font-size: 0.95rem;
+  }
+}
+
+/*Services two scc*/
+.services-section {
+  background-color: #fcf8f5;
+  padding: 80px 20px;
+  text-align: left;
+  font-family: 'Poppins', sans-serif;
+
+  .ah5 {
+    color: #9c7c56;
+    font-weight: 500;
+  }
+
+  .ah1 {
+    font-size: 2.5rem;
+    color: #073b4c;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .appointment-btn {
+    background-color: #c19b6b;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .appointment-btn:hover {
+    background-color: #a47f55;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+
+  .service-card {
+    background: white;
+    padding: 30px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-header {
+      margin-bottom: 10px;
+      .card-number {
+        color: #b38b5b;
+        font-weight: bold;
+        font-size: 18px;
+      }
+    }
+
+    .service-title {
+      font-size: 20px;
+      color: #073b4c;
+      margin-bottom: 10px;
+    }
+
+    .service-desc {
+      color: #333;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+  }
+}
+

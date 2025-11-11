@@ -1,0 +1,139 @@
+.footer {
+  background-color: #fcf8f5;
+  padding: 60px 0 30px;
+  text-align: center;
+  color: #073b4c;
+  border-top: 1px solid #eaeaea;
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 50px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    .footer-left,
+    .footer-right {
+      width: 25%;
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          color: #b38b5b;
+          font-size: 15px;
+          margin-bottom: 10px;
+          cursor: pointer;
+          transition: color 0.3s;
+
+          &:hover {
+            color: #073b4c;
+          }
+        }
+        li a{
+          text-decoration: none;
+          color: #b38b5b;
+        }
+        li a:hover{
+          color: #073b4c;
+          transform: translateY(-2px)
+        }
+      }
+    }
+
+    .footer-center {
+      width: 45%;
+      text-align: center;
+
+      .brand-name {
+        font-size: 28px;
+        font-weight: 600;
+        color: #073b4c;
+        margin-bottom: 10px;
+
+        span {
+          display: block;
+          font-size: 14px;
+          letter-spacing: 2px;
+          color: #073b4c;
+          font-weight: 400;
+        }
+      }
+
+      p {
+        color: #073b4c;
+        font-size: 15px;
+        margin: 5px 0;
+      }
+
+      .contact-number {
+        font-weight: bold;
+        color: #073b4c;
+        margin-top: 10px;
+      }
+
+      .email {
+        color: #b38b5b;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #eaeaea;
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: #073b4c;
+
+    .bottom-left,
+    .bottom-right {
+      flex: 1;
+      text-align: center;
+    }
+
+    .social-icons {
+      a {
+        color: #073b4c;
+        margin: 0 10px;
+        font-size: 18px;
+        transition: color 0.3s;
+
+        &:hover {
+          color: #b38b5b;
+        }
+      }
+    }
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .footer-left,
+    .footer-right,
+    .footer-center {
+      width: 100% !important;
+      margin-bottom: 20px;
+    }
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    .bottom-left,
+    .bottom-right {
+      margin: 10px 0;
+    }
+  }
+}

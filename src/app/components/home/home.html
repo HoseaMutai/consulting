@@ -1,0 +1,58 @@
+<section class="hero">
+  <div class="overlay"></div>
+ <app-navbar></app-navbar>
+
+  <div class="content">
+    <h1>
+      Finance,Tax & Management Consultants <br />
+      <span>Nairobi, Kenya.</span>
+    </h1>
+    <p>
+     Bringing Ideas Into Life.
+    </p>
+  </div>
+</section>
+<!-- about section -->
+<section class="about-section">
+  <div class="container">
+    <div class="column left">
+      <h6>About us</h6>
+      <h3>
+        We have different experts for different financial services.
+      </h3>
+    </div>
+
+    <div class="column right">
+      <h6>What we do</h6>
+      <h1>
+        We are dedicated to helping businesses and individuals navigate
+        the complex world of finance.
+      </h1>
+      <p>
+        We provide personalized solutions that are tailored to the unique
+        needs of each of our clients.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Services Section -->
+ <section class="services-section">
+  <div class="container">
+    <!-- <h5>Services</h5> -->
+    <h1>We offer a wide variety of financial services</h1>
+
+    <div class="services-grid">
+      @for (service of services; track $index) {
+        <div class="service-card">
+          <div class="card-header">
+            <span class="card-number">{{ service.id }}</span>
+          </div>
+          <h3 class="service-title">{{ service.title }}</h3>
+          <p class="service-desc">{{ service.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+<!-- Footer Section -->
+<app-footer></app-footer>

@@ -1,0 +1,49 @@
+<section class="services-hero">
+  <div class="overlay"></div>
+ <app-navbar></app-navbar>
+
+  <div class="content">
+   <h1>Our Services</h1>
+      <p>
+Accounting| Tax|advisory |Audit |Investment management |Asset Management
+      </p>
+  </div>
+</section>
+<!-- service two section -->
+  <section class="services-section">
+  <div class="container">
+    <!-- <h5 class="ah5">Services</h5> -->
+    <h1 class="ah1">We offer a wide variety of financial services</h1>
+    <div class="services-grid">
+      @for (service of services; track service.id) {
+        <div class="service-block" [id]="'service-' + service.id" tabindex="-1">
+        <div class="service-card">
+          <div class="card-header">
+            <span class="card-number">{{ service.id }}</span>
+          </div>
+          <h3 class="service-title">{{ service.title }}</h3>
+          <p class="service-desc">{{ service.description }}</p>
+        </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+<!-- service one section-->
+<section class="service-hero1">
+  <div class="service-hero-overlay">
+    <div class="service-hero-content">
+      <i class="fas fa-quote-left service-quote-icon"></i>
+      <h1 class="service-hero-title">
+        We provide structured solutions<br />
+        that are tailored to the unique<br />
+        needs of each of our clients.
+        
+      </h1>
+    </div>
+  </div>
+</section>
+<!--Footer section-->
+<app-footer></app-footer>
+
+

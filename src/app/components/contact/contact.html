@@ -1,0 +1,119 @@
+<section class="contact-hero">
+  <div class="overlay"></div>
+  <app-navbar></app-navbar>
+
+  <div class="content">
+    <h1>Contact Us</h1>
+    <p>
+      Accounting | Tax | Advisory | Audit | Investment Management | Asset Management
+    </p>
+  </div>
+</section>
+
+<!-- Contact us content -->
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Left Column: Contact Form -->
+      <div class="contact-form">
+
+        @if (successMessage) {
+          <div class="alert success">{{ successMessage }}</div>
+        }
+
+        @if (errorMessage) {
+          <div class="alert error">{{ errorMessage }}</div>
+        }
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+
+          <!-- Name Field -->
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input 
+              type="text" 
+              id="name" 
+              formControlName="name" 
+              placeholder="Enter your name" 
+            />
+            @if (contactForm.get('name')?.invalid && contactForm.get('name')?.touched) {
+              <div class="validation-error">
+                Name is required.
+              </div>
+            }
+          </div>
+
+          <!-- Email Field -->
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input 
+              type="email" 
+              id="email" 
+              formControlName="email" 
+              placeholder="Enter your email"
+            />
+            @if (contactForm.get('email')?.invalid && contactForm.get('email')?.touched) {
+              <div class="validation-error">
+                @if (contactForm.get('email')?.errors?.['required']) {
+                  <span>Email is required.</span>
+                }
+                @if (contactForm.get('email')?.errors?.['email']) {
+                  <span>Enter a valid email address.</span>
+                }
+              </div>
+            }
+          </div>
+
+          <!-- Message Field -->
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea 
+              id="message" 
+              rows="5" 
+              formControlName="message" 
+              placeholder="Write your message..."
+            ></textarea>
+            @if (contactForm.get('message')?.invalid && contactForm.get('message')?.touched) {
+              <div class="validation-error">
+                Message is required.
+              </div>
+            }
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            [disabled]="contactForm.invalid || isSubmitting"
+            class="btn-submit"
+          >
+            {{ isSubmitting ? 'Sending...' : 'Send Message' }}
+          </button>
+
+        </form>
+      </div>
+
+      <!-- Right Column: Contact Info -->
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p>We’d love to hear from you. Reach us via the following channels:</p>
+
+        <ul>
+          <li><strong>Email:</strong> akhsconsulting@gmail.com</li>
+          <li><strong>Phone:</strong> +254 720 292 780</li>
+          <li><strong>Address:</strong> Casuarina Building, 2nd Floor, Off Jogoo Road, KCB</li>
+        </ul>
+
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section -->
+<app-footer></app-footer>
