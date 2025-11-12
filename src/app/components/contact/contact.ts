@@ -34,7 +34,7 @@ export class Contact implements OnInit {
     errorMessage = '';
     
     // **CRITICAL:** Ensure this URL matches your running Node.js backend route
-    private apiServerUrl = 'http://localhost:3000/send-email'; 
+    private apiServerUrl = '/api/contact'; 
 
     constructor(
         private fb: FormBuilder,
